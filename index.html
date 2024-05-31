@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz v1.0</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .correct-answer {
+            color: green;
+            animation: blink 1s infinite;
+        }
+        .wrong-answer {
+            color: red;
+        }
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Quiz v1.0</h1>
+        <div id="quizContainer" class="container"></div>
+        <div id="progressBar" class="progress mt-4">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="mt-4 text-center">
+            <h3 id="scoreDisplay">Your Score: <span id="score">0</span></h3>
+        </div>
+        <audio id="correctSound" src="correct.mp3"></audio>
+        <audio id="wrongSound" src="wrong.mp3"></audio>
+        <audio id="timeoutSound" src="timeout.mp3"></audio>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
